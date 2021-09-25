@@ -8,5 +8,110 @@
 </head>
 <body>
     
+    <script>
+        //-------------foreach item of array---------------
+        let arr1 = [1,2,3,4];
+        let sum = 0;
+        for(x of arr1) {
+            sum += x;
+        }
+
+        //-------------creating new class-------------
+        class Point {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+            }
+
+            distance() {
+                return Math.sqrt(
+                    this.x * this.x +
+                    this.y * this.y
+                );
+            }
+        }
+        let p = new Point(1, 1);
+        p.distance(); //Math.sqrt
+
+
+        //-------------Seperating big numbers for reading-------------
+        let billion = 1_000_000_000;
+
+        //-------------Math object for calculations-------------
+        Math.abs (-5); //5
+        Math.max(1, 2, 3);
+        Math.trunc(3.9) // преобразует в целое число, отбрасывая дробную часть
+
+        // -------------Bigint-------------
+        let string = "l" + "0" .repeat (100); //1 со следующими 100 нулями
+
+        1000n + 2000n; // 3000n;
+
+
+        // -------------String-------------
+        "x".padStart(3, '*');  // **x
+
+        "  test    ".trim() // deletes spaces
+
+        "<>".repeat(5); // <><><><><><>
+
+        z = 5;
+        `hello ${3 + 4 +  z} user`; //hello 12 user
+
+        String.raw`'\n`.length;  //2 -> возвращает текст внутри обратных кавычек, не обрабатывая управляющие символы в  обратных кавычках:
+
+
+        //----------------Objects and arrays-----------------
+        let z = [1,2,3];
+        let x = z;
+        x[0] = 5; // z[0] = 5. Оба ссылаются на 1 и тот же объект
+
+        // Если вы хотите создать новую копию объекта или массива, тогда должны явно скопировать свойства объекта или элементы массива.
+        let x = Array.from(z); // ES6
+
+        //------------Coverting--------------
+        Number("3"); //3
+        String(false); // 'false'
+        Boolean(12); //true
+
+        !!8 // true
+
+        //-------------toString()-----------------
+        let n = 17;
+        let binary = n.toString(2); //10001
+        let hex = '0x' + n.toString(16);
+        
+        let array1 = [1,2,3,4,5];
+        array1.toString(); // "1,2,3,4,5"
+        
+        //-------------Преобразование и Округление-----------------
+        let п = 123456.789;
+        n.toFixed(2); //'123456.79'
+        n.toFixed(5); //'123456.78900'
+
+        n .toExponential(1) //"1.2е+5"
+        n.toPrecision(4)    //"1.235e+5"
+
+        //------------parseInt() && parseFloat()------------------
+        parselnt("3 blind mice"); //3
+        parseFloat(" 3.14 meters"); //3.14
+        parseFloat(".1"); //0.1
+        parselnt("0.1"); //0
+        parselnt(".1"); //NaN
+        parseFloat("$72.47"); //Nan
+
+        //------------Деструктурирующее присваивание------------------
+        let [x, y] = [1, 2]; // let x = 1, y = 2;
+
+        [x, y] = [y, x]; // Поменять местами x y
+
+        function divide_by_two(x, y) {
+            return [x/2 , y/2];
+        }
+
+        let [p, m] = divide_by_two[16, 4];
+
+    </script>
+
 </body>
 </html>
