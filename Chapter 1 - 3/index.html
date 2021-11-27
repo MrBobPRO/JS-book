@@ -89,7 +89,7 @@
         n.toFixed(2); //'123456.79'
         n.toFixed(5); //'123456.78900'
 
-        n .toExponential(1) //"1.2е+5"
+        n.toExponential(1) //"1.2е+5"
         n.toPrecision(4)    //"1.235e+5"
 
         //------------parseInt() && parseFloat()------------------
@@ -109,7 +109,19 @@
             return [x/2 , y/2];
         }
 
-        let [p, m] = divide_by_two[16, 4];
+        let [p, m] = divide_by_two(16, 4);
+
+        let z = {x: 1, y: 2};
+
+        for(const [name, value] of Object.entries(z)) {
+            console.log(name, value); //Выводится x = 1 и y = 1
+        }
+
+        let [х, ...у ] = [ 1 ,2 ,3 ,4 ] ; // x = 1; y = {2,3,4}
+
+        let [first, ...rest] = "Hello"; //first = "H", rest = "ello";
+
+        const {sin, cos, tan} = Math; //const sin = Math.sin, cos = Math.cos,tan = Math.tan
 
     </script>
 

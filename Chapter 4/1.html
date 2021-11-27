@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //-------------Object & massive---------------
+        let rectangle = {
+            upperLeft: { x: 2, y: 3},
+            lowerRight: { x: 4, y: 5}
+        };
+
+        let a = { b: null};
+        console.log(a.b?.c.d) // ->undefined
+        console.log(a.b.c.d) // ->TypeError because b is null
+
+
+        //--------------------Try and catch-------------------
+        try {
+            console.log(undefined_let);
+        } catch (e) {
+            console.log(e); //Reference error undefined_let is not defined
+        }
+    </script>
+
+</body>
+</html>
